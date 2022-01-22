@@ -1,0 +1,93 @@
+<html>
+<head>
+   <title>Kiwi's Vet Clinic</title>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+   body, html {
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    flex-direction: column;
+}
+*{
+    font-family: cursive;
+    box-sizing: padding-box;
+}
+
+form {
+    background-image: url("logo.jpg");
+    width: 1000px;
+    border: 3px solid  #b991b2 ;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+h2 {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+input {
+    display: block;
+    border: 2px solid #b991b2 ;
+    width: 95%;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+label {
+    color: black;
+    font-size: 18px;
+    padding: 10px;
+    background:  #b991b2;
+    margin: 10px auto;
+    border-radius: 5px;
+}
+
+button {
+    float: center;
+    background:  black ;
+    padding: 10px 15px;
+    color: #fff;
+    border-radius: 5px;
+    margin-right: 10px;
+    border: none;
+}
+
+.error {
+   background: white;
+   color: #0c0101;
+   padding: 10px;
+   width: 95%;
+   border-radius: 5px;
+   margin: 20px auto;
+}
+
+</style>
+</head>
+
+<body>
+     <h1 style="text-align: center; font-size:60px;">Kiwi's Vet Clinic</h1>
+     <form action="login.php" method="post">
+        <h2 style="color:black; background:#b991b2">LOGIN</h2>
+        <?php if (isset($_GET['error'])) { 
+            echo $_GET['error']; 
+       } ?>
+
+        <label>Please enter pet id</label>
+        <input type="text" name="phone" placeholder="Phone Number"><br>
+        
+        <label>Password</label>
+        <input type="password" name="password" placeholder="Password"><br> 
+        <button type="submit">Login</button>
+     </form>
+         <p> If you have not a account. Please call us!!
+              Our office number: 0216 701 71 71
+              Our secretary: 0530 790 71 71</p>
+
+</body>
+
+</html>
